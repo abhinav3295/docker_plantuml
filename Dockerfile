@@ -1,16 +1,11 @@
-FROM frolvlad/alpine-oraclejdk8
+FROM gradle:5.4.1-jdk11
 
-MAINTAINER think@hotmail.de
+MAINTAINER abhinav3295@gmail.com
 
-ENV PLANTUML_VERSION=1.2018.5
-
-RUN \
-  apk add --no-cache graphviz wget ca-certificates && \
-  wget "http://downloads.sourceforge.net/project/plantuml/${PLANTUML_VERSION}/plantuml.${PLANTUML_VERSION}.jar" -O plantuml.jar && \
-  apk del wget ca-certificates
+RUN apt-get update && \
+    apt-get install -y graphviz
 
 ENV LANG en_US.UTF-8
 
-ENTRYPOINT ["java", "-Djava.awt.headless=true", "-jar", "plantuml.jar", "-p"]
+ADD plantuml.1.2019.8.jar plantuml.jar
 
-CMD ["-tsvg"]

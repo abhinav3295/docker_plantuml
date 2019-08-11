@@ -7,5 +7,5 @@ RUN apt-get update && \
 
 ENV LANG en_US.UTF-8
 
-ADD plantuml.1.2019.8.jar plantuml.jar
+ADD plantuml.1.2019.8.jar /opt/plantuml.jar
 

@@ -1,4 +1,4 @@
-FROM gradle:5.4.1-jdk11
+FROM openjdk:11.0.4
 
 MAINTAINER abhinav3295@gmail.com
 

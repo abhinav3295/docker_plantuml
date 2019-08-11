@@ -14,11 +14,5 @@ This docker container does this for you. And allows you to pipe by default into 
 ## Usage
 
 ```
-cat test.uml | docker run --rm -i think/plantuml > test.svg
-```
-
-The default will output svg. If png output is wanted, call it like this:
-
-```
-cat test.uml | docker run --rm -i think/plantuml -tpng > test.png
+cat test.uml | docker run --rm -i think/plantuml > test.png
 ```
